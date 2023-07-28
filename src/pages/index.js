@@ -12,7 +12,7 @@ const HomePageContainer = styled.div`
   background-color: ${(props) => props.theme.backgroundColor};
   color: ${(props) => props.theme.textColor};
   transition: background-color 0.7s ease, color 0.3s ease;
-  padding: 0 3.5rem;
+  padding: 0 1rem;
   @media only screen and (min-width: 768px) {
     padding: 0 5rem;
   }
