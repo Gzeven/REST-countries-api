@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import Layout from '../components/Layout';
 import '../styles/globals.css'; // Your global styles here...
-import { ServerStyleSheet } from 'styled-components';
 
 const lightTheme = {
   backgroundColor: 'hsl(0, 0%, 98%)',
@@ -26,8 +25,6 @@ function MyApp({ Component, pageProps }) {
   const toggleTheme = () => {
     setDarkMode((prevDarkMode) => !prevDarkMode);
   };
-
-  const sheet = new ServerStyleSheet();
 
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>

@@ -9,7 +9,6 @@ const ToggleContainer = styled.button`
   display: flex;
   align-items: center;
   height: 22px;
-  /* background-color: ${(props) => props.theme.inputColor}; */
   color: ${(props) => props.theme.textColor};
   border: none;
   border-radius: 50px;

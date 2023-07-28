@@ -14,7 +14,6 @@ const FilterContainer = styled.div`
 
   @media only screen and (min-width: 768px) {
     height: 56px;
-    /* font-size: 14px; */
   }
 `;
 
@@ -39,10 +38,9 @@ const FilterSelect = styled.select`
   background-color: ${(props) => props.theme.elementsColor};
   color: ${(props) => props.theme.textColor};
   font-size: 12px;
-  /* font-weight: 400; */
+
   @media only screen and (min-width: 768px) {
     font-size: 14px;
-    /* font-size: 14px; */
   }
 `;
 

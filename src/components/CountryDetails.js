@@ -12,6 +12,7 @@ const DetailsContainer = styled.div`
   transition: background-color 0.7s ease, color 0.3s ease;
   flex-direction: column;
   flex-grow: 1; /* Take up all available vertical space */
+  min-height: 100vh;
   @media only screen and (min-width: 768px) {
     padding: 5rem;
   }
@@ -27,7 +28,7 @@ const BackButton = styled.button`
   background-color: ${(props) => props.theme.elementsColor};
   border-radius: 6px;
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
-  transition: all 0.2s ease-in-out;
+  /* transition: all 0.2s ease-in-out; */
   cursor: pointer;
 
   &:hover {

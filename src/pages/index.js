@@ -12,28 +12,30 @@ const HomePageContainer = styled.div`
   background-color: ${(props) => props.theme.backgroundColor};
   color: ${(props) => props.theme.textColor};
   transition: background-color 0.7s ease, color 0.3s ease;
+  padding: 0 3.5rem;
+  @media only screen and (min-width: 768px) {
+    padding: 0 5rem;
+  }
 `;
 
 const SearchAndFilterContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 0;
   gap: 2rem;
   @media only screen and (min-width: 768px) {
     flex-direction: row;
     justify-content: space-between;
-    padding: 3rem 5rem;
+    padding: 3rem 0;
   }
 `;
 
 const CardGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(264px, 1fr));
+  justify-items: center;
   gap: 2rem;
   min-height: 100vh;
-  @media only screen and (min-width: 768px) {
-   margin: 0 5rem;
-  
 `;
 
 const Message = styled.p`
