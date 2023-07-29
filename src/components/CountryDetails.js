@@ -143,7 +143,8 @@ const BorderingCountriesLabel = styled.span`
 
 const BorderingCountryLink = styled.a`
   display: inline-block;
-  margin: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
   min-width: 96px;
   text-align: center;
   padding: 5px 0;
