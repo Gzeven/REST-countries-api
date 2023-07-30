@@ -6,8 +6,8 @@ export default function Document() {
       <Head>
         <title>
           Frontend Mentor - REST Countries API with color theme switcher
-        </title>{' '}
-        <link rel="icon" href="/public/favicon.png" />
+          <link rel="icon" href="/public/favicon.ico" />
+        </title>
       </Head>
       <body>
         <Main />

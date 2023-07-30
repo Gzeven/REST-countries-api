@@ -96,6 +96,10 @@ const CountryDetailsContainer = styled.div`
   gap: 2rem;
   flex-direction: column;
 
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+
   @media only screen and (min-width: 1200px) {
     flex-direction: row;
     gap: 5rem;
