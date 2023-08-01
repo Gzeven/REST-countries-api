@@ -97,7 +97,7 @@ const CountryDetailsContainer = styled.div`
   flex-direction: column;
 
   @media only screen and (min-width: 768px) {
-    flex-direction: row;
+    /* flex-direction: row; */
   }
 
   @media only screen and (min-width: 1200px) {
@@ -129,7 +129,7 @@ const DetailsValue = styled.span`
 
 const BorderingCountries = styled.div`
   margin-top: 2rem;
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1200px) {
     margin-top: 4.25rem;
   }
 `;

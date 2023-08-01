@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import CountryCard from '../components/CountryCard';
 import CountrySearch from '../components/CountrySearch';
 import RegionFilter from '../components/RegionFilter';
+import LoadingPage from '@/components/LoadingPage';
 
 const HomePageContainer = styled.div`
   display: flex;
@@ -44,6 +45,7 @@ const Message = styled.p`
 `;
 
 const HomePage = ({ countries }) => {
+  const [loading, setLoading] = useState(true);
   // No need to fetch countries here, they are already passed as a prop
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedRegion, setSelectedRegion] = useState('');
@@ -53,6 +55,15 @@ const HomePage = ({ countries }) => {
       country.name.common.toLowerCase().includes(searchTerm.toLowerCase()) &&
       (selectedRegion === '' || country.region === selectedRegion)
   );
+
+  useEffect(() => {
+    setLoading(false);
+  }, []);
+
+  if (loading) {
+    // Show the loading page while the app is loading
+    return <LoadingPage />;
+  }
 
   return (
     <HomePageContainer>
