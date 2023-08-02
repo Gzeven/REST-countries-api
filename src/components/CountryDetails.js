@@ -180,6 +180,7 @@ const CountryDetails = ({ country, borderCountries }) => {
   } = country;
 
   console.log(country);
+  const formattedTld = tld ? tld.join(', ') : 'N/A';
 
   const nativeNames = name.nativeName;
 
@@ -252,7 +253,7 @@ const CountryDetails = ({ country, borderCountries }) => {
             <div>
               <CountryDetailsItem>
                 <DetailsLabel>Top Level Domain:</DetailsLabel>
-                <DetailsValue>{tld.join(', ')}</DetailsValue>
+                <DetailsValue>{formattedTld}</DetailsValue>
               </CountryDetailsItem>
               <CountryDetailsItem>
                 <DetailsLabel>Currencies:</DetailsLabel>
