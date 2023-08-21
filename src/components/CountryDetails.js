@@ -179,7 +179,6 @@ const CountryDetails = ({ country, borderCountries }) => {
     coatOfArms,
   } = country;
 
-  console.log(country);
   const formattedTld = tld ? tld.join(', ') : 'N/A';
 
   const nativeNames = name.nativeName;
