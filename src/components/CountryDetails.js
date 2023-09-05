@@ -181,6 +181,11 @@ const CountryDetails = ({ country, borderCountries }) => {
 
   const formattedTld = tld ? tld.join(', ') : 'N/A';
 
+  // Check if capital is an array, and join values with a comma if it is
+  const formattedCapital = Array.isArray(capital)
+    ? capital.join(', ')
+    : capital;
+
   const nativeNames = name.nativeName;
 
   const router = useRouter();
@@ -245,7 +250,7 @@ const CountryDetails = ({ country, borderCountries }) => {
               </CountryDetailsItem>
               <CountryDetailsItem>
                 <DetailsLabel>Capital:</DetailsLabel>
-                <DetailsValue>{capital}</DetailsValue>
+                <DetailsValue>{formattedCapital}</DetailsValue>
               </CountryDetailsItem>
             </div>
 
