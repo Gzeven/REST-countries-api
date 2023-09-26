@@ -11,7 +11,7 @@ const nunitoSans = Nunito_Sans({
 
 const PageContainer = styled.div`
   min-height: 100vh;
-  transition: all 5.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 `;
 
 const Layout = ({ darkMode, toggleTheme, children }) => {

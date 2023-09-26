@@ -16,7 +16,7 @@ const ToggleContainer = styled.button`
   padding: 0.5rem;
   font-size: 12px;
   font-weight: 6000
-  transition: background-color 0.3s ease, color 0.3s ease;
+  /*transition: background-color 0.7s ease, color 0.3s ease;*/
 
   svg {
     margin-right: 8px;

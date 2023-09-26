@@ -28,7 +28,6 @@ const BackButton = styled.button`
   background-color: ${(props) => props.theme.elementsColor};
   border-radius: 6px;
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
-  /* transition: all 0.2s ease-in-out; */
   cursor: pointer;
 
   &:hover {
