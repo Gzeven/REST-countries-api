@@ -8,6 +8,7 @@ import { faMoon } from '@fortawesome/free-regular-svg-icons';
 const ToggleContainer = styled.button`
   display: flex;
   align-items: center;
+  gap: .5rem;
   height: 22px;
   color: ${(props) => props.theme.textColor};
   border: none;
@@ -16,10 +17,8 @@ const ToggleContainer = styled.button`
   padding: 0.5rem;
   font-size: 12px;
   font-weight: 6000
-  /*transition: background-color 0.7s ease, color 0.3s ease;*/
-
+ 
   svg {
-    margin-right: 8px;
   }
 
   @media only screen and (min-width: 768px) {
