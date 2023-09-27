@@ -1,5 +1,6 @@
 // pages/_app.js
 import React, { useState } from 'react';
+import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
 import Layout from '../components/Layout';
 import '../styles/globals.css'; // Your global styles here...
@@ -27,13 +28,20 @@ function MyApp({ Component, pageProps }) {
   };
 
   return (
-    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <ThemeContext.Provider value={darkMode}>
-        <Layout darkMode={darkMode} toggleTheme={toggleTheme}>
-          <Component {...pageProps} />
-        </Layout>
-      </ThemeContext.Provider>
-    </ThemeProvider>
+    <>
+      <Head>
+        <title>
+          Frontend Mentor - REST Countries API with color theme switcher
+        </title>
+      </Head>
+      <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+        <ThemeContext.Provider value={darkMode}>
+          <Layout darkMode={darkMode} toggleTheme={toggleTheme}>
+            <Component {...pageProps} />
+          </Layout>
+        </ThemeContext.Provider>
+      </ThemeProvider>
+    </>
   );
 }
 
