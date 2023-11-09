@@ -95,10 +95,6 @@ const CountryDetailsContainer = styled.div`
   gap: 2rem;
   flex-direction: column;
 
-  @media only screen and (min-width: 768px) {
-    /* flex-direction: row; */
-  }
-
   @media only screen and (min-width: 1200px) {
     flex-direction: row;
     gap: 5rem;
@@ -296,5 +292,13 @@ const CountryDetails = ({ country, borderCountries }) => {
     </DetailsContainer>
   );
 };
+
+export async function getServerSideProps({ params }) {
+  const countries = await fetchCountries();
+  const country = countries.find((c) => c.name.common === params.country);
+  // Fetch border countries or other necessary data
+  const borderCountries = country?.borders || [];
+  return { props: { country, borderCountries } };
+}
 
 export default CountryDetails;
