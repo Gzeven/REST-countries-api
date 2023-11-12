@@ -183,6 +183,11 @@ const CountryDetails = ({ country, borderCountries }) => {
 
   const nativeNames = name.nativeName;
 
+  const currencyNames =
+    currencies && Object.values(currencies).map((currency) => currency.name);
+
+  const languageNames = languages && Object.values(languages);
+
   const router = useRouter();
 
   const handleGoBack = () => {
@@ -254,20 +259,19 @@ const CountryDetails = ({ country, borderCountries }) => {
                 <DetailsLabel>Top Level Domain:</DetailsLabel>
                 <DetailsValue>{formattedTld}</DetailsValue>
               </CountryDetailsItem>
-              <CountryDetailsItem>
-                <DetailsLabel>Currencies:</DetailsLabel>
-                <DetailsValue>
-                  {Object.values(currencies)
-                    .map((currency) => currency.name)
-                    .join(', ')}
-                </DetailsValue>
-              </CountryDetailsItem>
-              <CountryDetailsItem>
-                <DetailsLabel>Languages:</DetailsLabel>
-                <DetailsValue>
-                  {Object.values(languages).join(', ')}
-                </DetailsValue>
-              </CountryDetailsItem>
+
+              {currencyNames && (
+                <CountryDetailsItem>
+                  <DetailsLabel>Currencies:</DetailsLabel>
+                  <DetailsValue>{currencyNames.join(', ')}</DetailsValue>
+                </CountryDetailsItem>
+              )}
+              {languageNames && (
+                <CountryDetailsItem>
+                  <DetailsLabel>Languages:</DetailsLabel>
+                  <DetailsValue>{languageNames.join(', ')}</DetailsValue>
+                </CountryDetailsItem>
+              )}
             </div>
           </CountryDetailsContainer>
           {/* Displaying bordering countries */}
@@ -292,13 +296,5 @@ const CountryDetails = ({ country, borderCountries }) => {
     </DetailsContainer>
   );
 };
-
-export async function getServerSideProps({ params }) {
-  const countries = await fetchCountries();
-  const country = countries.find((c) => c.name.common === params.country);
-  // Fetch border countries or other necessary data
-  const borderCountries = country?.borders || [];
-  return { props: { country, borderCountries } };
-}
 
 export default CountryDetails;
