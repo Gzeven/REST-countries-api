@@ -1,7 +1,7 @@
 // components/Layout.js
 import React from 'react';
 import Header from './Header';
-import { Nunito_Sans } from "next/font/google";
+import { Nunito_Sans } from 'next/font/google';
 import styled from 'styled-components';
 
 const nunitoSans = Nunito_Sans({

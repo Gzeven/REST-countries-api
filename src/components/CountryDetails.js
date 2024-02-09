@@ -285,6 +285,7 @@ const CountryDetails = ({ country, borderCountries }) => {
                   key={borderCountry}
                   href={`/country/${encodeURIComponent(borderCountry)}`}
                   legacyBehavior
+                  passHref
                 >
                   <BorderingCountryLink>{borderCountry}</BorderingCountryLink>
                 </Link>

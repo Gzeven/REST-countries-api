@@ -47,6 +47,9 @@ const CountryInfo = styled.p`
 
 const CountryCard = ({ country }) => {
   const { name, population, region, capital, flags } = country;
+  const formattedCapitals = Array.isArray(capital)
+    ? capital.join(', ')
+    : capital;
 
   return (
     <CardContainer>
@@ -58,7 +61,7 @@ const CountryCard = ({ country }) => {
           <CountryName>{name.common}</CountryName>
           <CountryInfo>Population: {population.toLocaleString()}</CountryInfo>
           <CountryInfo>Region: {region}</CountryInfo>
-          <CountryInfo>Capital: {capital}</CountryInfo>
+          <CountryInfo>Capital: {formattedCapitals}</CountryInfo>
         </CountryData>
       </Link>
     </CardContainer>
