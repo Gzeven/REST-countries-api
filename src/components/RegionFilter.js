@@ -30,6 +30,11 @@ const FontAwesomeIconDub = styled(FontAwesomeIcon)`
   width: 9px;
 `;
 
+const FilterLabel = styled.label`
+ position: absolute;
+  left: -9999px;
+`;
+
 const FilterSelect = styled.select`
   width: 100%;
   height: 100%;
@@ -47,7 +52,8 @@ const FilterSelect = styled.select`
 const RegionFilter = ({ selectedRegion, onChange }) => {
   return (
     <FilterContainer>
-      <FilterSelect value={selectedRegion} onChange={onChange}>
+    <FilterLabel htmlFor="regionFilter">Filter by Region</FilterLabel>
+      <FilterSelect id="regionFilter" value={selectedRegion} onChange={onChange}>
         <option value="">Filter by Region</option>
         <option value="Africa">Africa</option>
         <option value="Americas">America</option>
