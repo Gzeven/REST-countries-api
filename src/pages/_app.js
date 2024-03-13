@@ -33,6 +33,7 @@ function MyApp({ Component, pageProps }) {
         <title>
           Frontend Mentor - REST Countries API with color theme switcher
         </title>
+        <meta name="description" content="This is a solution to the REST Countries API with color theme switcher challenge on Frontend Mentor" />
       </Head>
       <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
         <ThemeContext.Provider value={darkMode}>
