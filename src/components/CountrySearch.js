@@ -17,6 +17,7 @@ const SearchInputContainer = styled.div`
   @media only screen and (min-width: 768px) {
    height: 56px;
    font-size: 14px;
+  }
 `;
 
 const SearchInput = styled.input`
@@ -30,6 +31,7 @@ const SearchInput = styled.input`
   }
    @media only screen and (min-width: 768px) {
    padding-left: 1.5rem;
+   }
 `;
 
 const SearchIcon = styled(FontAwesomeIcon)`

@@ -23,6 +23,7 @@ const ToggleContainer = styled.button`
 
   @media only screen and (min-width: 768px) {
    font-size: 16px;
+  }
 `;
 
 const ThemeToggle = ({ darkMode, toggleTheme }) => {

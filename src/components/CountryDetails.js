@@ -29,7 +29,7 @@ const BackButton = styled.button`
   border-radius: 6px;
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
   cursor: pointer;
-
+  transition: all .6s;
   &:hover {
     background-color: ${(props) => props.theme.textColor};
     color: ${(props) => props.theme.elementsColor};
@@ -47,6 +47,7 @@ const FlagImage = styled.img`
 
    @media only screen and (min-width: 768px) {
     border-radius: 10.0057px;  
+   }
 `;
 
 const CountryName = styled.h1`
@@ -60,12 +61,14 @@ const CountryName = styled.h1`
   
   @media only screen and (min-width: 768px) {
    font-size: 32px;
+  }
 `;
 
 const CountryNameImage = styled.img`
   height: 40px;
    @media only screen and (min-width: 768px) {
    height: 50px;
+   }
 `;
 
 const CountryContainer = styled.div`
@@ -151,7 +154,7 @@ const BorderingCountryLink = styled.a`
   color: ${(props) => props.theme.textColor};
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.104931);
   border-radius: 2px;
-  transition: all 0.2s ease-in-out;
+  transition: all .6s ease-in-out;
   cursor: pointer;
 
   &:hover {

@@ -10,6 +10,7 @@ const CardContainer = styled.div`
   box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
   background-color: ${(props) => props.theme.elementsColor};
   color: ${(props) => props.theme.textColor};
+  transition: all 0.6s;
   &:hover {
     background-color: ${(props) => props.theme.textColor};
     color: ${(props) => props.theme.elementsColor};
